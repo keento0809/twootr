@@ -6,9 +6,10 @@ import { v4 as uuidv4 } from "uuid";
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static("frontend/public"));
+app.use(express.static("frontend/build"));
 app.use(express.urlencoded({ extended: false }));
-const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
+const port = "https://twoot-pj.herokuapp.com/";
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
