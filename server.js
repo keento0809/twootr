@@ -8,16 +8,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("frontend/build"));
 app.use(express.urlencoded({ extended: false }));
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || "https://twoot-pj.herokuapp.com";
+// const port = "https://twoot-pj.herokuapp.com/"; 8080
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
 let twoots = [];
-
-app.get("/", (req, res) => {
-  res.send("working");
-});
 
 app.get("/twoots", (req, res) => {
   axios

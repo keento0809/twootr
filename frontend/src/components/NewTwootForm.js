@@ -105,7 +105,7 @@ const NewTwootForm = (props) => {
     };
 
     axios
-      .post("http://localhost:8080/twoot", { newTwoot })
+      .post("/twoot", { newTwoot })
       .then((res) => {
         setIsUpdate(!isUpdate);
         textInputRef.current.value = "";
