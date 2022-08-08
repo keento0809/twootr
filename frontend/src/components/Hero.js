@@ -74,6 +74,10 @@ const Hero = (props) => {
     });
   };
   const handleUpdateUser = () => {
+    if (user.firstName === "" || user.lastName === "") {
+      alert("Invalid username");
+      return;
+    }
     setIsEditing(false);
   };
   const handleOpenForm = () => {

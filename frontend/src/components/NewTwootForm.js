@@ -72,14 +72,17 @@ const NewTwootForm = (props) => {
 
   const handleCount = (e) => {
     const length = e.target.value.length;
+    console.log(length);
     if (length > 140) {
-      alert("Cannot enter more than 140 words");
       setIsDisabled(true);
+      setWordCount(140 - length);
       return;
     }
     isDisabled === true && setIsDisabled(false);
     setWordCount(140 - length);
   };
+
+  console.log(wordCount);
 
   const handleMouseLeave = () => {
     setIsFocus(false);
@@ -116,8 +119,6 @@ const NewTwootForm = (props) => {
   useEffect(() => {
     isFocus && textInputRef.current.focus();
   }, [isFocus]);
-
-  console.log(isEditing);
 
   return (
     <>
