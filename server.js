@@ -15,6 +15,10 @@ app.listen(port, () => {
 
 let twoots = [];
 
+app.get("/", (req, res) => {
+  res.send("working");
+});
+
 app.get("/twoots", (req, res) => {
   axios
     .get("https://quotable.io/quotes?page=1&maxLength=140")
