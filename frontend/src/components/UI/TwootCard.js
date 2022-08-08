@@ -34,6 +34,7 @@ const TwootCardStyle = styled.li`
     padding: 1.5rem 0 0.5rem 1rem;
     font-weight: bold;
     border-bottom: 3px solid #333;
+    word-break: break-word;
   }
 
   & .card-bottom {
