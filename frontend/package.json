@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:8080/",
+  "proxy": "https://twoot-pj.herokuapp.com/",
   "name": "twootr",
   "version": "0.1.0",
   "private": true,
