@@ -105,7 +105,7 @@ const NewTwootForm = (props) => {
     };
 
     axios
-      .post("https://twoot-pj.herokuapp.com/twoot", { newTwoot })
+      .post("/twoot", { newTwoot })
       .then((res) => {
         setIsUpdate(!isUpdate);
         textInputRef.current.value = "";
